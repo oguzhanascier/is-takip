@@ -3,7 +3,7 @@ import { authRef } from "@/firebase/config";
 
 const hata = ref(null)
 
-const singup = async (email, parola, kullaniciAd) => {
+const singup = async (email, parola, kullaniciAd) => { //- üye olmak için ayrıca kullaniciad ekledik
     hata.value = null;
     try {
         const res = await authRef.createUserWithEmailAndPassword(email, parola)
