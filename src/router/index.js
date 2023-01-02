@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Login from '../views/auth/LoginComp.vue'
 import SingUp from '../views/auth/SingUp.vue'
 
 const routes = [
