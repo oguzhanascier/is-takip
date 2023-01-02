@@ -25,8 +25,8 @@ const singup = async (email, parola, kullaniciAd) => {
 }
 
 
-const us = () => {
-    return { hata, login }
+const useSingup = () => {
+    return { hata, singup }
 }
 
-export default useLogin
+export default useSingup
