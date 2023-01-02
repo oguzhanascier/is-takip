@@ -11,7 +11,7 @@ const singup = async (email, parola, kullaniciAd) => {
         if (!res) {
             throw new Error('Üye olma işlemi gerçekleşmedi.')
         }
-        await res.user.updateProfile({
+        await res.user.updateProfile({ /// burada nameyi kullanici ad olarak belirledik
             displayName: kullaniciAd
         })
         hata.value = null
@@ -25,7 +25,7 @@ const singup = async (email, parola, kullaniciAd) => {
 }
 
 
-const useLogin = () => {
+const us = () => {
     return { hata, login }
 }
 
