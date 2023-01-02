@@ -20,7 +20,7 @@ export default {
         const parola = ref('')
         const kullaniciAd=ref('')
         const handleSubmit = async () => {
-            const res = await singup(email.value, parola.value)
+            const res = await singup(email.value, parola.value, kullaniciAd.value)
             console.log(res);
             if (!hata.value) {
                 console.log('kullanıcı giriş yaptı');
