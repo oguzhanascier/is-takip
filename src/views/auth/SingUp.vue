@@ -15,11 +15,12 @@ import useSingup from '@/composables/useSingup'
 import { ref } from 'vue';
 export default {
     setup() {
-        let { hata, login } = useLogin()
+        let { hata, singup } = useSingup()
         const email = ref('')
         const parola = ref('')
+        const kullaniciAd=ref('')
         const handleSubmit = async () => {
-            const res = await login(email.value, parola.value)
+            const res = await singup(email.value, parola.value)
             console.log(res);
             if (!hata.value) {
                 console.log('kullanıcı giriş yaptı');
