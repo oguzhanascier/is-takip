@@ -25,6 +25,8 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-const firestoreRef=firebase.firestore();
-const authRef=firebase.auth();
-const tarih=firebase.firestore.FieldValue.serverTimestamp()
+const firestoreRef = firebase.firestore();
+const authRef = firebase.auth();
+const tarih = firebase.firestore.FieldValue.serverTimestamp()
+
+export { firestoreRef, authRef, tarih }
