@@ -18,6 +18,7 @@ export default {
         const parola = ref('')
         const handleSubmit = async () => {
             const res = await login(email.value, parola.value)
+            console.log(res);
             if (!hata.value) {
                 console.log('kullanıcı giriş yaptı');
             }
