@@ -10,7 +10,8 @@
 </template>
 
 <script>
-import useLogin from '@/composables/useLogin';
+
+import useSingup from '@/composables/useSingup'
 import { ref } from 'vue';
 export default {
     setup() {
