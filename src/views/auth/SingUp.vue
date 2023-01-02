@@ -26,7 +26,7 @@ export default {
                 console.log('kullanıcı giriş yaptı');
             }
         }
-        return { email, parola, handleSubmit, hata }
+        return { email, parola, kullaniciAd, handleSubmit, hata }
     }
 }
 </script>
