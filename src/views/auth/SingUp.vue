@@ -23,7 +23,7 @@ export default {
             const res = await singup(email.value, parola.value, kullaniciAd.value)
             console.log(res);
             if (!hata.value) {
-                console.log('kullanıcı giriş yaptı');
+                console.log('kullanıcı üye oldu');
             }
         }
         return { email, parola, kullaniciAd, handleSubmit, hata }
