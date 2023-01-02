@@ -8,11 +8,13 @@ const singup = async (email, parola, kullaniciAd) => {
     try {
         const res = await authRef.createUserWithEmailAndPassword(email, parola)
 
-        if(!res){
+        if (!res) {
             throw new Error('Üye olma işlemi gerçekleşmedi.')
         }
-
-        hata.value=null
+        await res.user.updateProfile({
+            displayName: kullaniciAd
+        })
+        hata.value = null
         return res
 
     } catch (error) {
