@@ -2,7 +2,7 @@ import firebase from "firebase/compat/app";
 
 import "firebase/compat/firestore";
 
-import "firebase/compat/auth"; 
+import "firebase/compat/auth";
 
 const firebaseConfig = {
 
@@ -22,5 +22,9 @@ const firebaseConfig = {
 
     measurementId: "G-RV1KELVHXM"
 
-  };
+};
 
+firebase.initializeApp(firebaseConfig);
+const firestoreRef=firebase.firestore();
+const authRef=firebase.auth();
+const tarih=firebase.firestore.FieldValue.serverTimestamp()
