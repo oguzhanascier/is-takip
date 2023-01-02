@@ -3,24 +3,27 @@ import { authRef } from "@/firebase/config";
 
 const hata = ref(null)
 
-const login = async (email, parola) => { 
+const singup = async (email, parola, kullaniciAd) => {
     hata.value = null;
     try {
-        const res = await authRef.signInWithEmailAndPassword(email, parola) 
-        hata.value = null 
+        const res = await authRef.createUserWithEmailAndPassword(email, parola)
 
-        return res 
-        
+        if(!res){
+            throw new Error('Üye olma işlemi gerçekleşmedi.')
+        }
+
+        return res
+
     } catch (error) {
-        hata.value = 'Login başarısız' + ' ' + error.message 
+        hata.value = 'Login başarısız' + ' ' + error.message
     }
 
 
 }
 
 
-const useLogin=()=>{  
-    return {hata,login}
+const useLogin = () => {
+    return { hata, login }
 }
 
 export default useLogin
