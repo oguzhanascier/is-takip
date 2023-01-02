@@ -3,6 +3,8 @@
     <h3>Giriş</h3>
     <input type="email" placeholder="Email Giriniz" v-model="email">
     <input type="password" placeholder="Password Giriniz" v-model="parola">
+    <button>Giriş</button>
+    <div v-if="hata" class="error">{{hata}}</div>
 </form>
 </template>
 
