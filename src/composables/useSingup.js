@@ -15,7 +15,7 @@ const singup = async (email, parola, kullaniciAd) => {
         return res
 
     } catch (error) {
-        hata.value = 'Login başarısız' + ' ' + error.message
+        hata.value = error.message
     }
 
 
