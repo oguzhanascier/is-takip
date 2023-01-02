@@ -12,6 +12,7 @@ const singup = async (email, parola, kullaniciAd) => {
             throw new Error('Üye olma işlemi gerçekleşmedi.')
         }
 
+        hata.value=null
         return res
 
     } catch (error) {
