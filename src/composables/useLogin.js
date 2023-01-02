@@ -9,6 +9,9 @@ const login = async (email, parola) => { //- email i dışarıdan göndereceğiz
     try {
         const res = await authRef.signInWithEmailAndPassword(email, parola) /// authreften sonraki bir method giriş methodumuz tanımlanmış
         hata.value = null /// işlem başarsız olduktan sonra başarılı olursa diye boşalttık
+
+        return res 
+        
     } catch (error) {
         hata.value = 'Login başarısız' + ' ' + error.message ///burası da malum hata xD
     }
