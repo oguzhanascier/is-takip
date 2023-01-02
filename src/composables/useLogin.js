@@ -15,3 +15,10 @@ const login = async (email, parola) => { //- email i dışarıdan göndereceğiz
 
 
 }
+
+
+const useLogin=()=>{  //-hata ve logini bir fonksiyon içinden return etmemiz gerekiyor diğer yerde sağlıklı kullanabilmemiz için
+    return {hata,login}
+}
+
+export default useLogin
