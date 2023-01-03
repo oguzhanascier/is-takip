@@ -17,15 +17,29 @@
 import { ref } from 'vue';
 export default {
     setup() {
+//  ######################################################## 
+//  #                      DATA                            #
+//  ########################################################        
         const baslik = ref('')
         const aciklama = ref('')
         const basTarih = ref('')
-
+        const file = ref(null)
+        const fileHata = ref(null)
+//  ######################################################## 
+//  #                      METHODS                            #
+//  ########################################################  
         const handleSubmit = () => {
             console.log(baslik.value, aciklama.value, basTarih.value);
         }
 
+        const handleChange=(e)=>{
+            let secilen= e.target.files[0]
+            console.log(secilen);
+        }
 
+//  ######################################################## 
+//  #                      RETURN                          #
+//  ########################################################  
         return {handleSubmit, baslik, aciklama,basTarih}
     }
 }
