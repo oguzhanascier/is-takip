@@ -7,6 +7,8 @@
             <label> Tanıtıcı Fotoğraf</label>
             <input type="file">
             <input type="datetime-local">
+            <div class="error"></div>
+            <button>Oluştur</button>
         </form>
     </div>
 </template>
