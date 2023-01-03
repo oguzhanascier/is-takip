@@ -6,7 +6,9 @@
                 <router-link :to="{name:'Home'}">İş Takip</router-link>
             </h1>
             <div class="links">
-                <button @click="handleClick">Çıkış</button>
+                <div v-if="kullanici">
+                    <button @click="handleClick">Çıkış</button>
+                </div>
                 <router-link class="btn" :to="{name:'SingUp'}">Üye Ol</router-link>
                 <router-link class="btn" :to="{name:'Login'}">Giriş</router-link>
             </div>
@@ -29,7 +31,7 @@ export default {
             router.push({name:'Home'})
         }
 
-        return {handleClick}
+        return {handleClick, kullanici}
     }
 }
 </script>
