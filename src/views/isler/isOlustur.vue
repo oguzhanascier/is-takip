@@ -5,7 +5,7 @@
             <input type="text" placeholder="İşe Başlığı" v-model="baslik">
             <textarea placeholder="Açıklama Ekle" v-model="aciklama"></textarea>
             <label> Tanıtıcı Fotoğraf</label>
-            <input type="file">
+            <input type="file" @change="handleChange">
             <input type="datetime-local" v-model="basTarih">
             <div class="error"></div>
             <button>Oluştur</button>
