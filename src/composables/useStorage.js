@@ -17,7 +17,7 @@ const useStorage = () => {
             const res= await storage.put(file) ///storage yukarıda oluşturduğumuz sabit
             url.value= await res.ref.getDownloadURL() ///tanımlanmış fonksiyonla dosya yolu oluşturuldu
         } catch (error) {
-            
+            hata.value=error;
         }
     }
 }
