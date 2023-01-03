@@ -6,7 +6,7 @@ import SingUp from '../views/auth/SingUp.vue'
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: HomeView
   }, 
   {
