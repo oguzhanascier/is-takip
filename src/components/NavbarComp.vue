@@ -20,6 +20,7 @@ import { useRouter } from 'vue-router';
 export default {
     setup() {
         const {logout} = useLogout()
+        const router = useRouter()
 
         return {}
     }
