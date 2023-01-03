@@ -22,6 +22,11 @@ export default {
         const {logout} = useLogout()
         const router = useRouter()
 
+        const handleClick=async()=>{
+            await logout();
+            router.push({name:'Home'})
+        }
+
         return {}
     }
 }
