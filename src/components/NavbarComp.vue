@@ -22,6 +22,7 @@ export default {
     setup() {
         const {logout} = useLogout()
         const router = useRouter()
+        const {kullanici}=getUser()
 
         const handleClick=async()=>{
             await logout();
