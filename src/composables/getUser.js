@@ -9,7 +9,7 @@ authRef.onAuthStateChanged(k => { /// durumun değişip değişmediğini yakalay
 })
 
 const getUser = () => {
-    return kullanici
+    return {kullanici} //* parantez içine almazsak hata veriyor
 }
 
 

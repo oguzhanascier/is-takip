@@ -9,7 +9,7 @@
                 <div v-if="kullanici">
                     <button @click="handleClick">Çıkış</button>
                 </div>
-                <div>
+                <div v-if="!kullanici">
                     <router-link class="btn" :to="{name:'SingUp'}">Üye Ol</router-link>
                     <router-link class="btn" :to="{name:'Login'}">Giriş</router-link>
                 </div>
@@ -27,6 +27,7 @@ export default {
         const {logout} = useLogout()
         const router = useRouter()
         const {kullanici}=getUser()
+        console.log(kullanici);
 
         const handleClick=async()=>{
             await logout();
