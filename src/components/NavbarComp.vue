@@ -9,8 +9,10 @@
                 <div v-if="kullanici">
                     <button @click="handleClick">Çıkış</button>
                 </div>
-                <router-link class="btn" :to="{name:'SingUp'}">Üye Ol</router-link>
-                <router-link class="btn" :to="{name:'Login'}">Giriş</router-link>
+                <div>
+                    <router-link class="btn" :to="{name:'SingUp'}">Üye Ol</router-link>
+                    <router-link class="btn" :to="{name:'Login'}">Giriş</router-link>
+                </div>
             </div>
         </nav>
     </div>
