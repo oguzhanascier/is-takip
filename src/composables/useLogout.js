@@ -17,3 +17,5 @@ const logout = async () => {
 const useLogout=()=>{
     return { hata, logout}
 }
+
+export default useLogout
