@@ -32,5 +32,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+input [type='file']{
+    border: 0;
+    padding: 0;
+}
+label{
+    font-size: 17px;
+    display: block;
+    margin-top: 30px;
+}
+
+form{
+    margin-top: 30px;
+}
 
 </style>
