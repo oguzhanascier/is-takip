@@ -17,6 +17,8 @@
 import { ref } from 'vue';
 export default {
     setup () {
+        const baslik=ref('')
+        const aciklama=ref('')
         
 
         return {}
