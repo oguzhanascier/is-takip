@@ -6,7 +6,7 @@
                 <router-link :to="{name:'Home'}">İş Takip</router-link>
             </h1>
             <div class="links">
-                <button>Çıkış</button>
+                <button @click="handleClick">Çıkış</button>
                 <router-link class="btn" :to="{name:'SingUp'}">Üye Ol</router-link>
                 <router-link class="btn" :to="{name:'Login'}">Giriş</router-link>
             </div>
@@ -27,7 +27,7 @@ export default {
             router.push({name:'Home'})
         }
 
-        return {}
+        return {handleClick}
     }
 }
 </script>
