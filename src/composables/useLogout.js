@@ -9,7 +9,7 @@ const logout = async () => {
     try {
         await authRef.signOut() ///bu tanımlanmış bir fonksiyon böylece direkt çıkıyor
     } catch (error) {
-        hata.value=err.message
+        hata.value=error.message
     }
 
 }
