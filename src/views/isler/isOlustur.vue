@@ -23,8 +23,9 @@ export default {
         const baslik = ref('')
         const aciklama = ref('')
         const basTarih = ref('')
-        // const file = ref(null)
-        // const fileHata = ref(null)
+        const file = ref(null)
+        const fileHata = ref(null)
+        const gecerliTipler = ['image/png', 'image/jpeg']
         //  ######################################################## 
         //  #                      METHODS                            #
         //  ########################################################  
@@ -34,7 +35,13 @@ export default {
 
         const handleChange = (e) => {
             let secilen = e.target.files[0]
-            console.log(secilen);
+            if (secilen && gecerliTipler.includes(secilen.type)) {
+                file.value=secilen
+                fileHata.value=null
+            }else{
+                file.value=null
+                fileHata.value='Lütfen jpeg veya png uzantılı dosya seçin'
+            }
         }
 
         //  ######################################################## 
