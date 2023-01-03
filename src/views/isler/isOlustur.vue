@@ -17,47 +17,47 @@
 import { ref } from 'vue';
 export default {
     setup() {
-//  ######################################################## 
-//  #                      DATA                            #
-//  ########################################################        
+        //  ######################################################## 
+        //  #                      DATA                            #
+        //  ########################################################        
         const baslik = ref('')
         const aciklama = ref('')
         const basTarih = ref('')
-        const file = ref(null)
-        const fileHata = ref(null)
-//  ######################################################## 
-//  #                      METHODS                            #
-//  ########################################################  
+        // const file = ref(null)
+        // const fileHata = ref(null)
+        //  ######################################################## 
+        //  #                      METHODS                            #
+        //  ########################################################  
         const handleSubmit = () => {
             console.log(baslik.value, aciklama.value, basTarih.value);
         }
 
-        const handleChange=(e)=>{
-            let secilen= e.target.files[0]
+        const handleChange = (e) => {
+            let secilen = e.target.files[0]
             console.log(secilen);
         }
 
-//  ######################################################## 
-//  #                      RETURN                          #
-//  ########################################################  
-        return {handleSubmit, baslik, aciklama,basTarih}
+        //  ######################################################## 
+        //  #                      RETURN                          #
+        //  ########################################################  
+        return { handleSubmit, baslik, aciklama, basTarih, handleChange }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-input [type='file']{
+input [type='file'] {
     border: 0;
     padding: 0;
 }
-label{
+
+label {
     font-size: 17px;
     display: block;
     margin-top: 30px;
 }
 
-form{
+form {
     margin-top: 30px;
 }
-
 </style>
