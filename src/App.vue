@@ -1,4 +1,5 @@
 <template>
+  <navbar-comp-vue />
   <div class="content">
     <router-view />
   </div>
