@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import useLogout from '@/composables/useLogout';
 export default {
     setup() {
 
