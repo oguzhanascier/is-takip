@@ -34,7 +34,8 @@ export default {
         const handleSubmit = async () => {
             if(file.value){
                 await resimYukle(file.value)
-                console.log(resimYukle);
+                console.log(fileYol);
+                
             }
         }
 
@@ -52,7 +53,7 @@ export default {
         //  ######################################################## 
         //  #                      RETURN                          #
         //  ########################################################  
-        return { handleSubmit, baslik, aciklama, basTarih, handleChange }
+        return { handleSubmit, baslik, aciklama, basTarih, handleChange,url, fileYol, hata }
     }
 }
 </script>
