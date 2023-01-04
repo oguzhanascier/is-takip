@@ -14,7 +14,7 @@ const useStorage = () => {
         const storage = storageRef.ref(fileYol.value) ///dosya yolu burada referansa atıldı ve burada strogeye dosya oluşturuldu
 
         try {
-            const res = await storage.put(file) ///storage yukarıda oluşturduğumuz sabit
+            const res = await storage.put(file) ///storage yukarıda oluşturduğumuz sabit ile dosyayı oluşturduk
             url.value = await res.ref.getDownloadURL() ///tanımlanmış fonksiyonla burada url oluşturuldu
         } catch (error) {
             hata.value = error;
