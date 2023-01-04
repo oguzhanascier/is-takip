@@ -10,7 +10,7 @@ const useStorage = () => {
     const fileYol = ref(null)
 
     const resimYukle = async (file) => { //-resim yüklemek için gerekli fonksiyon
-        fileYol.value = `isler/${kullanici.value.uid}/{file.name}`
+        fileYol.value = `isler/${kullanici.value.uid}/${file.name}`
         const storage = storageRef.ref(fileYol.value)
 
         try {
