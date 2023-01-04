@@ -11,7 +11,7 @@ const useStorage = () => {
 
     const resimYukle = async (file) => { //-resim yüklemek için gerekli fonksiyon
         fileYol.value = `isler/${kullanici.value.uid}/${file.name}` /// burada dosya yolu seçildi
-        const storage = storageRef.ref(fileYol.value) ///dosya yolu burada referansa atıldı
+        const storage = storageRef.ref(fileYol.value) ///dosya yolu burada referansa atıldı ve burada strogeye dosya oluşturuldu
 
         try {
             const res = await storage.put(file) ///storage yukarıda oluşturduğumuz sabit
