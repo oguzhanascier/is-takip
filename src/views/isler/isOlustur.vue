@@ -30,14 +30,22 @@ export default {
         const fileHata = ref(null)
         const gecerliTipler = ['image/png', 'image/jpeg']
         const { resimYukle, url, fileYol, hata }= useStorage()
+        const {hataColletion, belgeEkle}=useColletion('isler')
+        const {kullanici}=getUser()
         //  ######################################################## 
         //  #                      METHODS                            #
         //  ########################################################  
         const handleSubmit = async () => {
             if(file.value){
                 await resimYukle(file.value)
-                console.log(url.value); //dosya urlesi artık bu yolun içinde
-                
+                // console.log(url.value); //dosya urlesi artık bu yolun içinde
+                await belgeEkle({
+                    baslik:baslik.value,
+                    aciklama:aciklama.value,
+                })
+                if(!hataColletion.value){
+                    console.log('iş eklendi'+ kullanici);
+                }
             }
         }
 

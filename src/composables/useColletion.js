@@ -12,7 +12,7 @@ const useColletion = (koleksiyon) => {
         }
     }
 
-    return [hataColletion, belgeEkle]
+    return {hataColletion, belgeEkle}
 }
 
 
