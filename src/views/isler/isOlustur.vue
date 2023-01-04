@@ -16,6 +16,8 @@
 <script>
 import { ref } from 'vue';
 import useStorage from '@/composables/useStorage';
+import useColletion from '@/composables/useColletion'
+import getUser from '@/composables/getUser'; // işi yükleyenlerin bilgileri de olacağı için bunu eklemeliyiz
 export default {
     setup() {
         //  ######################################################## 
