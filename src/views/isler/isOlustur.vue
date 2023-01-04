@@ -27,6 +27,7 @@ export default {
         const file = ref(null)
         const fileHata = ref(null)
         const gecerliTipler = ['image/png', 'image/jpeg']
+        const { resimYükle, url, fileYol, hata }= useStorage()
         //  ######################################################## 
         //  #                      METHODS                            #
         //  ########################################################  
