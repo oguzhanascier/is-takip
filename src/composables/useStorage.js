@@ -9,7 +9,7 @@ const useStorage = () => {
     const url = ref(null)
     const fileYol = ref(null)
 
-    const resimYükle = async (file) => { //-resim yüklemek için gerekli fonksiyon
+    const resimYukle = async (file) => { //-resim yüklemek için gerekli fonksiyon
         fileYol.value = `isler/${kullanici.value.uid}/{file.name}`
         const storage = storageRef.ref(fileYol.value)
 
@@ -21,7 +21,7 @@ const useStorage = () => {
         }
     }
 
-    return { resimYükle, url, fileYol, hata }
+    return { resimYukle, url, fileYol, hata }
 }
 
 
