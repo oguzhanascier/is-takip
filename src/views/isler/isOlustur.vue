@@ -18,6 +18,7 @@ import { ref } from 'vue';
 import useStorage from '@/composables/useStorage';
 import useColletion from '@/composables/useColletion'
 import getUser from '@/composables/getUser'; // işi yükleyenlerin bilgileri de olacağı için bunu eklemeliyiz
+import { tarih } from '@/firebase/config';
 export default {
     setup() {
         //  ######################################################## 
@@ -29,22 +30,31 @@ export default {
         const file = ref(null)
         const fileHata = ref(null)
         const gecerliTipler = ['image/png', 'image/jpeg']
-        const { resimYukle, url, fileYol, hata }= useStorage()
-        const {hataColletion, belgeEkle}=useColletion('isler')
-        const {kullanici}=getUser()
+        const { resimYukle, url, fileYol, hata } = useStorage()
+        const { hataColletion, belgeEkle } = useColletion('isler')
+        const { kullanici } = getUser()
         //  ######################################################## 
         //  #                      METHODS                            #
         //  ########################################################  
         const handleSubmit = async () => {
-            if(file.value){
+            if (file.value) {
                 await resimYukle(file.value)
                 // console.log(url.value); //dosya urlesi artık bu yolun içinde
                 await belgeEkle({
-                    baslik:baslik.value,
-                    aciklama:aciklama.value,
+                    baslik: baslik.value,
+                    aciklama: aciklama.value,
+                    kullaniciId: kullanici.value.uid,
+                    kullaniciAd: kullanici.value.displayName,
+                    resimUrl: url.value,
+                    fileYol: fileYol.value,
+                    isAdimlar: [],
+                    isTarih: Date.parse(basTarih.value),
+                    olusturulmaTarihi: tarih()
                 })
-                if(!hataColletion.value){
-                    console.log('iş eklendi'+ kullanici);
+                if (!hataColletion.value) {
+                    console.log(kullanici.value.uid);
+                } else {
+                    console.log(hataColletion.value);
                 }
             }
         }
@@ -52,18 +62,18 @@ export default {
         const handleChange = (e) => {
             let secilen = e.target.files[0]
             if (secilen && gecerliTipler.includes(secilen.type)) {
-                file.value=secilen
-                fileHata.value=null
-            }else{
-                file.value=null
-                fileHata.value='Lütfen jpeg veya png uzantılı dosya seçin'
+                file.value = secilen
+                fileHata.value = null
+            } else {
+                file.value = null
+                fileHata.value = 'Lütfen jpeg veya png uzantılı dosya seçin'
             }
         }
 
         //  ######################################################## 
         //  #                      RETURN                          #
         //  ########################################################  
-        return { handleSubmit, baslik, aciklama, basTarih, handleChange,url, fileYol, hata }
+        return { handleSubmit, baslik, aciklama, basTarih, handleChange, url, fileYol, hata }
     }
 }
 </script>
