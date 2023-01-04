@@ -34,7 +34,7 @@ export default {
         const handleSubmit = async () => {
             if(file.value){
                 await resimYukle(file.value)
-                console.log(fileYol);
+                console.log(fileYol); //dosya urlesi artık bu yolun içinde
                 
             }
         }
