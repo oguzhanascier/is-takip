@@ -27,12 +27,15 @@ export default {
         const file = ref(null)
         const fileHata = ref(null)
         const gecerliTipler = ['image/png', 'image/jpeg']
-        const { resimYükle, url, fileYol, hata }= useStorage()
+        const { resimYukle, url, fileYol, hata }= useStorage()
         //  ######################################################## 
         //  #                      METHODS                            #
         //  ########################################################  
-        const handleSubmit = () => {
-            console.log(baslik.value, aciklama.value, basTarih.value);
+        const handleSubmit = async () => {
+            if(file.value){
+                await resimYukle(file.value)
+                console.log(resimYukle);
+            }
         }
 
         const handleChange = (e) => {
