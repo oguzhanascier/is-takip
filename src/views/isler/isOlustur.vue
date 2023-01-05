@@ -6,7 +6,7 @@
             <textarea placeholder="Açıklama Ekle" v-model="aciklama"></textarea>
             <label> Tanıtıcı Fotoğraf</label>
             <input type="file" @change="handleChange">
-            <input type="datetime-local" v-model="basTarih">
+            <input type="date" v-model="basTarih">
             <div class="error"></div>
             <button>Oluştur</button>
         </form>
