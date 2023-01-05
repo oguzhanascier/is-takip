@@ -20,9 +20,11 @@ const getCollection = (koleksiyon) => {
 
     }, err => {
         console.log(err.message);
-        belgeler.value=null
-        hataCollection.value='Verilere erişilemedi'
+        belgeler.value = null
+        hataCollection.value = 'Verilere erişilemedi'
     })
+
+    return { belgeler, hataCollection }
 }
 
 
