@@ -24,3 +24,6 @@ const getCollection = (koleksiyon) => {
         hataCollection.value='Verilere erişilemedi'
     })
 }
+
+
+export default getCollection
