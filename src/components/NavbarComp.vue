@@ -7,7 +7,7 @@
             </h1>
             <div class="links">
                 <div v-if="kullanici">
-                    <router-link :to="{name:'İsOlustur'}">İş Oluştur</router-link>
+                    <router-link class="btn" :to="{name:'İsOlustur'}">İş Oluştur</router-link>
                     <button @click="handleClick">Çıkış</button>
                 </div>
                 <div v-if="!kullanici">
