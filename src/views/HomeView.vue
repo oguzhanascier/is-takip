@@ -8,7 +8,8 @@
 import getCollection from '@/composables/getCollection'
 export default {
   name: 'HomeView',
-  components: {
+  setup() {
+    const { belgeler, hataCollection } = getCollection()
   }
 }
 </script>
