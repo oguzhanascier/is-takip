@@ -10,6 +10,8 @@ export default {
   name: 'HomeView',
   setup() {
     const { belgeler, hataCollection } = getCollection()
+
+    return {hataCollection,belgeler}
   }
 }
 </script>
