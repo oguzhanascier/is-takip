@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import Login from '../views/auth/LoginComp.vue'
 import SingUp from '../views/auth/SingUp.vue'
 import isOlustur from '../views/isler/isOlustur'
+import { authRef } from '@/firebase/config'
 
 const routes = [
   {
