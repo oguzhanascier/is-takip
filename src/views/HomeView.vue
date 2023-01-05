@@ -5,9 +5,7 @@
         {{ hataCollection }}
       </div>
       <div v-if="belgeler">
-        <div v-for="belge in belgeler" :key="belge.id">
-          {{ belge.baslik }}
-        </div>
+        <is-listesi-vue :isler="isler" />
       </div>
     </div>
   </div>
