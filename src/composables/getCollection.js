@@ -8,7 +8,13 @@ const getCollection = (koleksiyon) => {
     let koleksiyonRef = firestoreRef.collection(koleksiyon).orderBy('olusturulmaTarihi', 'desc')
 
     // / OnSnapshot() methodu, veritabanı verilerini gerçek zamanlı olarak izlemek ve bu veriler üzerinde işlem yapmak için kullanılır. Bu method, Firebase veritabanlarında veri yönetimi için önemli bir araçtır.
-    koleksiyonRef.onSnapshot(span => {
+    koleksiyonRef.onSnapshot(snap => {
+        let sonuclar = []
+        snap.docs.forEach(doc => {
+            doc.data().olusturulmaTarihi && sonuclar.push(///oluşturulma tarihi yoksa puş olayı gerçekleşmeyecek
+                { ...doc.data(), id: doc.id }
+            )
+        })
 
     })
 }
