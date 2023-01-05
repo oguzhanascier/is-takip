@@ -5,12 +5,23 @@ import SingUp from '../views/auth/SingUp.vue'
 import isOlustur from '../views/isler/isOlustur'
 import { authRef } from '@/firebase/config'
 
+const authGiris = (to, from, next) => {
+  let kullanici = authRef.currentUser
+
+  if (!kullanici) {
+    next({ name: 'Login' })
+  } else {
+    next()
+  }
+}
+
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomeView
-  }, 
+    component: HomeView,
+    beforeEnter: authGiris
+  },
   {
     path: '/login',
     name: 'Login',
@@ -24,7 +35,9 @@ const routes = [
   {
     path: '/is-olustur',
     name: 'İsOlustur',
-    component: isOlustur
+    component: isOlustur,
+    beforeEnter: authGiris
+
   },
 ]
 
