@@ -5,7 +5,7 @@
         {{ hataCollection }}
       </div>
       <div v-if="belgeler">
-        <is-listesi-vue :isler="isler" />
+        <is-listesi-vue :isler="belgeler" />
       </div>
     </div>
   </div>
