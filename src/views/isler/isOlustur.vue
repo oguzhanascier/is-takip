@@ -25,6 +25,7 @@ export default {
         //  ######################################################## 
         //  #                      DATA                            #
         //  ########################################################        
+        const router=useRouter()
         const baslik = ref('')
         const aciklama = ref('')
         const basTarih = ref('')
