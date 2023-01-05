@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    Anasayfa
+    <div class="home">
+      <div v-if="hataCollection" class="error">
+        {{ hataCollection }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -11,7 +15,7 @@ export default {
   setup() {
     const { belgeler, hataCollection } = getCollection()
 
-    return {hataCollection,belgeler}
+    return { hataCollection, belgeler }
   }
 }
 </script>
