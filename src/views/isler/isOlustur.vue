@@ -25,7 +25,7 @@ export default {
         //  ######################################################## 
         //  #                      DATA                            #
         //  ########################################################        
-        const router=useRouter()
+        const router = useRouter()
         const baslik = ref('')
         const aciklama = ref('')
         const basTarih = ref('')
@@ -42,7 +42,7 @@ export default {
             if (file.value) {
                 await resimYukle(file.value)
                 // console.log(url.value); //dosya urlesi artık bu yolun içinde
-                await belgeEkle({
+                const res = await belgeEkle({
                     baslik: baslik.value,
                     aciklama: aciklama.value,
                     kullaniciId: kullanici.value.uid,
@@ -54,7 +54,7 @@ export default {
                     olusturulmaTarihi: tarih()
                 })
                 if (!hataColletion.value) {
-                    console.log(kullanici.value.uid);
+                    router.push({ name: 'isDetay', params: { id: res.id } })
                 } else {
                     console.log(hataColletion.value);
                 }
