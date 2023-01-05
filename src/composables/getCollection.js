@@ -3,7 +3,7 @@ import { firestoreRef } from "@/firebase/config";
 
 const getCollection = (koleksiyon) => {
     const belgeler = ref(null)
-    const hataColletion = ref(null)
+    const hataCollection = ref(null)
 
     let koleksiyonRef = firestoreRef.collection(koleksiyon).orderBy('olusturulmaTarihi', 'desc')
 
@@ -16,11 +16,11 @@ const getCollection = (koleksiyon) => {
             )
         })
         belgeler.value = sonuclar
-        hataColletion.value = null
+        hataCollection.value = null
 
     }, err => {
         console.log(err.message);
         belgeler.value=null
-        hataColletion.value='Verilere erişilemedi'
+        hataCollection.value='Verilere erişilemedi'
     })
 }
