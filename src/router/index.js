@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Login from '../views/auth/LoginComp.vue'
 import SingUp from '../views/auth/SingUp.vue'
-import isOlustur from '../views/isler/isOlustur'
+import isOlustur from '../views/isler/isOlustur';
+import isDetay from '../views/isler/isDetay';
 import { authRef } from '@/firebase/config'
 
 const authGiris = (to, from, next) => {
@@ -37,6 +38,14 @@ const routes = [
     name: 'İsOlustur',
     component: isOlustur,
     beforeEnter: authGiris
+
+  },
+  {
+    path: '/isler/:id',
+    name: 'isDetay',
+    component: isDetay,
+    beforeEnter: authGiris,
+    props: true
 
   },
 ]
