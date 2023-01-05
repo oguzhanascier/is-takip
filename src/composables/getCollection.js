@@ -15,6 +15,12 @@ const getCollection = (koleksiyon) => {
                 { ...doc.data(), id: doc.id }
             )
         })
+        belgeler.value = sonuclar
+        hataColletion.value = null
 
+    }, err => {
+        console.log(err.message);
+        belgeler.value=null
+        hataColletion.value='Verilere erişilemedi'
     })
 }
