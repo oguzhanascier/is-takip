@@ -17,6 +17,7 @@
 
 <script>
 export default {
+    props:['isler'],
     setup() {
 
 
