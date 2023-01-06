@@ -13,7 +13,7 @@ const useDocument = (koleksiyon, id) => {
             const res= await belgeRef.delete()
             return res
         } catch (error) {
-            
+            hata.value='Belge Silinirken bir hata oluştu'
         }
     }
 }
