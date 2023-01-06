@@ -37,10 +37,10 @@ export default {
         })
         const { belgeSil } = useDocument('isler', props.id)
         const handleDelete = async () => {
-
+            await belgeSil()
         }
 
-        return { hataDocument, is, kullaniciIs, belgeSil }
+        return { hataDocument, is, kullaniciIs, handleDelete }
     }
 }
 </script>
