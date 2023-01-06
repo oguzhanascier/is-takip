@@ -4,6 +4,7 @@
 </template>
 
 <script>
+import getDocument from '@/composables/getDocument';
 export default {
     props:['id'],
     setup () {
