@@ -9,7 +9,7 @@ const getDocument = (koleksiyon, id) => {
     let belgeRef = firestoreRef.collection(koleksiyon).doc(id)
 
     belgeRef.onSnapshot(doc => {
-        if (doc.data()) {
+        if (doc.data()) { ///buradaki datayı method olarak kullanmazsak hata verir
             belge.value = { ...doc.data(), id: doc.id }
             hataDocument.value = null
         } else {
