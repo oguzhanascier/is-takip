@@ -10,7 +10,7 @@ export default {
     setup(props) {
         const { hataDocument, belge: is } = getDocument('isler', props.id)
 
-        return {}
+        return { hataDocument, is }
     }
 }
 </script>
