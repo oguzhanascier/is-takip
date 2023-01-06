@@ -22,6 +22,7 @@
 
 <script>
 import getDocument from '@/composables/getDocument';
+import getUser from '@/composables/getUser';
 export default {
     props: ['id'],
     setup(props) {
