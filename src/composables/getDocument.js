@@ -23,3 +23,5 @@ const getDocument = (koleksiyon, id) => {
     return { hataDocument, belge }
 
 }
+
+export default getDocument
