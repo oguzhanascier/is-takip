@@ -36,6 +36,9 @@ export default {
             return is.value && kullanici.value && kullanici.value.uid == is.value.kullaniciId ///işi ekleyenle kullanıcının aynı kişi oldugunu kontrol ediyoruz
         })
         const { belgeSil } = useDocument('isler', props.id)
+        const handleDelete = async () => {
+
+        }
 
         return { hataDocument, is, kullaniciIs, belgeSil }
     }
