@@ -16,6 +16,7 @@ const useDocument = (koleksiyon, id) => {
             hata.value='Belge Silinirken bir hata oluştu'
         }
     }
+    return {hata,belgeSil}
 }
 
 
