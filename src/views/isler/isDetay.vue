@@ -1,6 +1,8 @@
 <template>
     <h3>İş Detay</h3>
-    <p>iş id - {{ id }}</p>
+    <div v-if="hataDocument" class="error">
+        {{ hataDocument }}
+    </div>
 </template>
 
 <script>
