@@ -37,7 +37,7 @@ export default {
         })
         const { belgeSil } = useDocument('isler', props.id)
 
-        return { hataDocument, is, kullaniciIs }
+        return { hataDocument, is, kullaniciIs, belgeSil }
     }
 }
 </script>
