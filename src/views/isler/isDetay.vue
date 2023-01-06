@@ -16,6 +16,7 @@
         </div>
         <div class="work-list">
             <h2>İş Adımları</h2>
+            <button v-if="kullaniciIs">İşi Sil</button>
         </div>
     </div>
 </template>
