@@ -8,6 +8,13 @@ const useDocument = (koleksiyon, id) => {
 
     const belgeSil = async () => {
         hata.value = null
+
+        try {
+            const res= await belgeRef.delete()
+            return res
+        } catch (error) {
+            
+        }
     }
 }
 
