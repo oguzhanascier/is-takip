@@ -24,8 +24,7 @@
 <script>
 import getDocument from '@/composables/getDocument';
 import getUser from '@/composables/getUser';
-import { get } from 'http';
-import { computed } from 'vuex';
+import { computed } from 'vue';
 export default {
     props: ['id'],
     setup(props) {
