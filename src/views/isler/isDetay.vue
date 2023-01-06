@@ -29,9 +29,13 @@ export default {
     props: ['id'],
     setup(props) {
         const { hataDocument, belge: is } = getDocument('isler', props.id)
-        const {kullanici}=getUser()
+        const { kullanici } = getUser()
+        const kullaniciIs = computed(() => {
 
-        return { hataDocument, is }
+            return is.value && kullanici.value && kullanici.value.uid == is.value.kullaniciId ///işi ekleyenle kullanıcının aynı kişi oldugunu kontrol ediyoruz
+        })
+
+        return { hataDocument, is, kullaniciIs }
     }
 }
 </script>
