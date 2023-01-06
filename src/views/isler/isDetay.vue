@@ -1,6 +1,6 @@
 <template>
     <h3>İş Detay</h3>
-    <div v-if="hataDocument" class="error">
+    <div v-if="hataDocument" style="font-size:32px" class="error">
         {{ hataDocument }}
     </div>
     <div v-if="is" class="work-details">
@@ -16,7 +16,7 @@
         </div>
         <div class="work-list">
             <h2>İş Adımları</h2>
-            <button v-if="kullaniciIs">İşi Sil</button>
+            <button v-if="kullaniciIs" @click="handleDelete">İşi Sil</button>
         </div>
     </div>
 </template>
@@ -38,6 +38,7 @@ export default {
         const { belgeSil } = useDocument('isler', props.id)
         const handleDelete = async () => {
             await belgeSil()
+            hataDocument.value='İş Silindi'
         }
 
         return { hataDocument, is, kullaniciIs, handleDelete }
