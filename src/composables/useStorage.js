@@ -20,6 +20,9 @@ const useStorage = () => {
             hata.value = error;
         }
     }
+    const resimSil= async(yol)=>{
+        
+    }
 
     return { resimYukle, url, fileYol, hata }
 }
