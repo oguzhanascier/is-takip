@@ -44,6 +44,8 @@ export default {
             await resimSil(is.value.file)
             await belgeSil()
             hataDocument.value='İş Silindi'
+
+            router.push({name:'Home'})
         }
 
         return { hataDocument, is, kullaniciIs, handleDelete }
