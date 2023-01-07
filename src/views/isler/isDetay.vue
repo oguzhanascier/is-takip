@@ -41,6 +41,7 @@ export default {
         const {resimSil}=useStorage()
         const router=useRouter()
         const handleDelete = async () => {
+            await resimSil(is.value.file)
             await belgeSil()
             hataDocument.value='İş Silindi'
         }
