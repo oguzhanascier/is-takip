@@ -39,6 +39,7 @@ export default {
         })
         const { belgeSil } = useDocument('isler', props.id)
         const {resimSil}=useStorage()
+        const router=useRouter()
         const handleDelete = async () => {
             await belgeSil()
             hataDocument.value='İş Silindi'
