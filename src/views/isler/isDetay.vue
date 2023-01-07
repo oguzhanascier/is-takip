@@ -24,6 +24,7 @@
 <script>
 import getDocument from '@/composables/getDocument';
 import getUser from '@/composables/getUser';
+import useStorage from '@/composables/useStorage';
 import useDocument from '@/composables/useDocument';
 import { computed } from 'vue';
 export default {
