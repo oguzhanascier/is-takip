@@ -27,6 +27,7 @@ import getUser from '@/composables/getUser';
 import useStorage from '@/composables/useStorage';
 import useDocument from '@/composables/useDocument';
 import { computed } from 'vue';
+import { useRouter } from 'vue-router';
 export default {
     props: ['id'],
     setup(props) {
