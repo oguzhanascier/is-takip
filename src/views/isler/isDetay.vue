@@ -29,7 +29,7 @@ import useDocument from '@/composables/useDocument';
 import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 export default {
-    props: ['id'],
+    props: ['id'], 
     setup(props) {
         const { hataDocument, belge: is } = getDocument('isler', props.id)
         const { kullanici } = getUser()
